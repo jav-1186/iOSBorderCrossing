@@ -10,12 +10,16 @@ import UIKit
 class currencyViewController: UIViewController
 {
     @IBOutlet weak var exR: UILabel!
+    @IBOutlet weak var dollarEnt: UITextField!
+    @IBOutlet weak var pesoEnt: UITextField!
+    @IBOutlet weak var pesoConvert: UILabel!
+    @IBOutlet weak var dollarConvert: UILabel!
     
     let baseURL = "https://openexchangerates.org/api/latest.json?app_id=0f82e3a7c5fe4ce185d85093c7768a39"
     
     var feed = ""
     let appKey = "0f82e3a7c5fe4ce185d85093c7768a39"
-    var rateD: String = ""
+    var rateD: Double = 0.0
     
     // Class to hold JSON data for trains
     class currency
@@ -42,6 +46,42 @@ class currencyViewController: UIViewController
         feed = baseURL
         loadData()
         
+    }
+    
+    @IBAction func calculateRate(_ sender: UIButton)
+    {
+        loadData()
+        
+        if let dlr = Double(dollarEnt.text!)
+        {
+            var dlr2peso = dlr * rateD
+            pesoConvert.text = "= " + "\(dlr2peso)" + " pesos"
+        }
+        
+        if let pso = Double(pesoEnt.text!)
+        {
+            var pso2dlr = pso/rateD
+            dollarConvert.text = "= " + "\(pso2dlr)" + " dollars"
+        }
+        
+        
+        
+    }
+    
+    @IBAction func backgroundTouch(_ sender: UIControl)
+    {
+        dollarEnt.resignFirstResponder()
+        pesoEnt.resignFirstResponder()
+    }
+    
+    @IBAction func keyboardReturn(_ sender: UITextField)
+    {
+        sender.resignFirstResponder()
+    }
+    
+    @IBAction func keyboardReturn2(_ sender: UITextField)
+    {
+        sender.resignFirstResponder()
     }
     
     
@@ -84,7 +124,7 @@ func loadData()
                         throw SerializationError.missing("MXN")
                     }
                     print(test)
-                    
+                    self.rateD = test as! Double
                     
                     //print(entries)
                     print("wtf")
