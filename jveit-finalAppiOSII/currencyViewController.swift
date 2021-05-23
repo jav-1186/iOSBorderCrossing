@@ -55,13 +55,15 @@ class currencyViewController: UIViewController
         if let dlr = Double(dollarEnt.text!)
         {
             var dlr2peso = dlr * rateD
-            pesoConvert.text = "= " + "\(dlr2peso)" + " pesos"
+            let doubleStr = String(format: "%.2f", dlr2peso)
+            pesoConvert.text = "= " + doubleStr + " pesos"
         }
         
         if let pso = Double(pesoEnt.text!)
         {
             var pso2dlr = pso/rateD
-            dollarConvert.text = "= " + "\(pso2dlr)" + " dollars"
+            let doubleStr2 = String(format: "%.2f", pso2dlr)
+            dollarConvert.text = "= " + doubleStr2 + " dollars"
         }
         
         

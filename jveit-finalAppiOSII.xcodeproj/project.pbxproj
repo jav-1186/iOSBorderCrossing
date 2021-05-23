@@ -28,6 +28,7 @@
 		8E8AA3892655CD510065AACC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8E8AA390265612E60065AACC /* currencyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = currencyViewController.swift; sourceTree = "<group>"; };
 		8E8AA397265613F40065AACC /* borderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = borderViewController.swift; sourceTree = "<group>"; };
+		8E8AA39A265A07210065AACC /* drive.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = drive.gpx; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +66,7 @@
 				8E8AA37F2655CD4A0065AACC /* ViewController.swift */,
 				8E8AA3812655CD4A0065AACC /* Main.storyboard */,
 				8E8AA397265613F40065AACC /* borderViewController.swift */,
+				8E8AA39A265A07210065AACC /* drive.gpx */,
 				8E8AA390265612E60065AACC /* currencyViewController.swift */,
 				8E8AA3842655CD510065AACC /* Assets.xcassets */,
 				8E8AA3862655CD510065AACC /* LaunchScreen.storyboard */,
