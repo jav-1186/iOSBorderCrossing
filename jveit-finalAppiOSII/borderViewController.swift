@@ -15,6 +15,9 @@ class borderViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var locationL: UILabel!
     @IBOutlet weak var enterR: UILabel!
+    @IBOutlet weak var flagP: UIImageView!
+    @IBOutlet weak var infoT: UILabel!
+    @IBOutlet weak var infoP: UIImageView!
     
     
     let locationManager = CLLocationManager()
@@ -28,7 +31,7 @@ class borderViewController: UIViewController, CLLocationManagerDelegate {
     let points =
     [
         (lat: 32.666735, lon: -115.499422, name: "Close Proximity to Mexican Border"),
-        (lat: 32.664685, lon: -115.499830, name: "Mexicali Garita"),
+        (lat: 32.664685, lon: -115.499830, name: "Mexico Border"),
         (lat: 41.982322, lon: -87.807626, name: "Harlem Blue Line Station"),
         (lat: 41.971639, lon: -87.763435, name: "Jefferson Park Blue Line Station")
     ]
@@ -174,6 +177,10 @@ class borderViewController: UIViewController, CLLocationManagerDelegate {
             border.title = "Mexico Border"
             border.coordinate = CLLocationCoordinate2D(latitude: 32.664685, longitude: -115.499830)
             let placeR = Place(borderCrossing.coordinate, "Mexico Border")
+            showAlert(withTitle:"You are about to Cross the Mexican Border", message: "Please ensure you have the proper identification (Passport, insurance, drivers license)")
+            flagP.image = UIImage(named:"mexico")
+            infoT.text = "When you cross the Mexico border your car will go through customs. If your light is green, you will continue to pass. If you hit a red signal, your luggage and vehicle will be searched."
+            infoP.image = UIImage(named:"declare")
         }
         
         else if region.identifier == "Cumberland Blue Line Station"

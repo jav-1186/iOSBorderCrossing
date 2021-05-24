@@ -38,7 +38,7 @@
                                 <rect key="frame" x="20" y="384" width="41" height="26"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xDg-ZM-MmZ">
@@ -85,7 +85,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7p3-Xv-ddf">
-                                <rect key="frame" x="65" y="20" width="277" height="23"/>
+                                <rect key="frame" x="69" y="20" width="277" height="23"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Location Guide">
                                         <attributes>
@@ -98,24 +98,24 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="W27-eX-tIi">
-                                <rect key="frame" x="20" y="482" width="374" height="233"/>
+                                <rect key="frame" x="20" y="557" width="374" height="158"/>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="374" id="Pep-mX-NHX"/>
-                                    <constraint firstAttribute="height" constant="233" id="XbT-xp-hWE"/>
+                                    <constraint firstAttribute="height" constant="158" id="XbT-xp-hWE"/>
                                 </constraints>
                             </mapView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Points of Interest:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dEF-4e-60J">
-                                <rect key="frame" x="32" y="59" width="344" height="20.5"/>
+                                <rect key="frame" x="20" y="65" width="344" height="20.5"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="344" id="cgV-xy-RTd"/>
+                                    <constraint firstAttribute="width" constant="344" id="C8g-xp-4vG"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location: " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qi0-Lk-XAS">
-                                <rect key="frame" x="20" y="427" width="344" height="19.5"/>
+                                <rect key="frame" x="20" y="529" width="344" height="19.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="344" id="L2b-f4-nQP"/>
                                 </constraints>
@@ -123,28 +123,61 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to Cachanilla Cultura! " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LSI-U0-SkU">
+                                <rect key="frame" x="20" y="104" width="374" height="20.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="374" id="lYw-A9-KbC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="plant" translatesAutoresizingMaskIntoConstraints="NO" id="XiG-gQ-eEZ">
+                                <rect key="frame" x="117.5" y="276" width="179" height="178"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="178" id="Lcu-Dp-Eoa"/>
+                                    <constraint firstAttribute="width" constant="179" id="SDu-8K-UmY"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="america" translatesAutoresizingMaskIntoConstraints="NO" id="UaW-E6-yrq">
+                                <rect key="frame" x="284" y="445" width="130" height="38"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="130" id="OeI-10-OR4"/>
+                                    <constraint firstAttribute="height" constant="38" id="aAQ-Jx-nVF"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="W1X-ap-W6S"/>
                         <color key="backgroundColor" systemColor="systemGray5Color"/>
                         <constraints>
-                            <constraint firstItem="W1X-ap-W6S" firstAttribute="trailing" secondItem="dEF-4e-60J" secondAttribute="trailing" constant="38" id="2kp-f2-JeD"/>
+                            <constraint firstItem="XiG-gQ-eEZ" firstAttribute="centerY" secondItem="cTB-NY-KVP" secondAttribute="centerY" constant="-56" id="01y-hg-Y9z"/>
+                            <constraint firstAttribute="trailing" secondItem="UaW-E6-yrq" secondAttribute="trailing" id="0nv-Yk-Ocs"/>
+                            <constraint firstItem="LSI-U0-SkU" firstAttribute="top" secondItem="dEF-4e-60J" secondAttribute="bottom" constant="18.5" id="3Ar-7S-54p"/>
+                            <constraint firstItem="W1X-ap-W6S" firstAttribute="trailing" secondItem="dEF-4e-60J" secondAttribute="trailing" constant="50" id="3te-Zl-OmJ"/>
+                            <constraint firstItem="dEF-4e-60J" firstAttribute="leading" secondItem="W1X-ap-W6S" secondAttribute="leading" constant="20" id="60J-Ji-3YG"/>
+                            <constraint firstItem="UaW-E6-yrq" firstAttribute="top" secondItem="W1X-ap-W6S" secondAttribute="top" constant="445" id="6YM-R9-W6L"/>
                             <constraint firstItem="W27-eX-tIi" firstAttribute="leading" secondItem="W1X-ap-W6S" secondAttribute="leading" constant="20" id="9h5-At-XTJ"/>
-                            <constraint firstItem="dEF-4e-60J" firstAttribute="leading" secondItem="W1X-ap-W6S" secondAttribute="leading" constant="32" id="CZo-Ac-rju"/>
-                            <constraint firstItem="dEF-4e-60J" firstAttribute="top" secondItem="7p3-Xv-ddf" secondAttribute="bottom" constant="16" id="CwU-zG-j0S"/>
-                            <constraint firstItem="7p3-Xv-ddf" firstAttribute="leading" secondItem="W1X-ap-W6S" secondAttribute="leading" constant="65" id="GVY-uu-XIh"/>
+                            <constraint firstItem="dEF-4e-60J" firstAttribute="top" secondItem="7p3-Xv-ddf" secondAttribute="bottom" constant="22" id="AU5-UH-JGx"/>
+                            <constraint firstItem="7p3-Xv-ddf" firstAttribute="leading" secondItem="W1X-ap-W6S" secondAttribute="leading" constant="69" id="GVY-uu-XIh"/>
                             <constraint firstItem="Qi0-Lk-XAS" firstAttribute="leading" secondItem="W1X-ap-W6S" secondAttribute="leading" constant="20" id="Ga7-7M-nZo"/>
-                            <constraint firstItem="Qi0-Lk-XAS" firstAttribute="top" secondItem="dEF-4e-60J" secondAttribute="bottom" constant="347.5" id="Jcc-Sc-vXp"/>
-                            <constraint firstItem="W1X-ap-W6S" firstAttribute="trailing" secondItem="7p3-Xv-ddf" secondAttribute="trailing" constant="72" id="L06-Ya-mn2"/>
+                            <constraint firstItem="W1X-ap-W6S" firstAttribute="trailing" secondItem="7p3-Xv-ddf" secondAttribute="trailing" constant="68" id="L06-Ya-mn2"/>
+                            <constraint firstItem="W1X-ap-W6S" firstAttribute="trailing" secondItem="LSI-U0-SkU" secondAttribute="trailing" constant="20" id="P7m-XD-p8i"/>
                             <constraint firstItem="7p3-Xv-ddf" firstAttribute="top" secondItem="W1X-ap-W6S" secondAttribute="top" constant="20" id="Q3Z-SY-2A2"/>
                             <constraint firstItem="W1X-ap-W6S" firstAttribute="bottom" secondItem="W27-eX-tIi" secondAttribute="bottom" constant="44" id="SZh-yJ-dOo"/>
                             <constraint firstItem="W1X-ap-W6S" firstAttribute="trailing" secondItem="W27-eX-tIi" secondAttribute="trailing" constant="20" id="TTD-Mb-GXC"/>
                             <constraint firstItem="W1X-ap-W6S" firstAttribute="trailing" secondItem="Qi0-Lk-XAS" secondAttribute="trailing" constant="50" id="Zft-P1-mWV"/>
-                            <constraint firstItem="W27-eX-tIi" firstAttribute="top" secondItem="Qi0-Lk-XAS" secondAttribute="bottom" constant="35.5" id="gao-PE-ovl"/>
+                            <constraint firstItem="LSI-U0-SkU" firstAttribute="leading" secondItem="W1X-ap-W6S" secondAttribute="leading" constant="20" id="ecB-Na-ITR"/>
+                            <constraint firstItem="W27-eX-tIi" firstAttribute="top" secondItem="Qi0-Lk-XAS" secondAttribute="bottom" constant="8.5" id="gao-PE-ovl"/>
+                            <constraint firstItem="UaW-E6-yrq" firstAttribute="leading" secondItem="W1X-ap-W6S" secondAttribute="leading" constant="284" id="m4a-KK-usr"/>
+                            <constraint firstItem="XiG-gQ-eEZ" firstAttribute="centerX" secondItem="cTB-NY-KVP" secondAttribute="centerX" id="ri6-cN-z5n"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Location Guide" image="location.circle.fill" catalog="system" selectedImage="location.circle.fill" id="n6Q-qE-Cl5"/>
                     <connections>
                         <outlet property="enterR" destination="dEF-4e-60J" id="O1b-Uk-Po8"/>
+                        <outlet property="flagP" destination="UaW-E6-yrq" id="oAr-Ar-p1m"/>
+                        <outlet property="infoP" destination="XiG-gQ-eEZ" id="2j4-Rk-kaE"/>
+                        <outlet property="infoT" destination="LSI-U0-SkU" id="iMu-iF-1TP"/>
                         <outlet property="locationL" destination="Qi0-Lk-XAS" id="2Ox-H1-yZI"/>
                         <outlet property="mapView" destination="W27-eX-tIi" id="eUA-Nv-5DB"/>
                     </connections>
@@ -415,6 +448,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="america" width="620" height="344"/>
         <image name="dollarsign.circle.fill" catalog="system" width="128" height="121"/>
         <image name="location.circle.fill" catalog="system" width="128" height="121"/>
         <image name="person.2.fill" catalog="system" width="128" height="80"/>
