@@ -32,7 +32,7 @@ class borderViewController: UIViewController, CLLocationManagerDelegate {
     [
         (lat: 32.666735, lon: -115.499422, name: "Close Proximity to Mexican Border"),
         (lat: 32.664685, lon: -115.499830, name: "Mexico Border"),
-        (lat: 41.982322, lon: -87.807626, name: "Harlem Blue Line Station"),
+        (lat: 32.663696, lon: -115.496192, name: "Oxxo Market"),
         (lat: 41.971639, lon: -87.763435, name: "Jefferson Park Blue Line Station")
     ]
     
@@ -111,7 +111,7 @@ class borderViewController: UIViewController, CLLocationManagerDelegate {
     // Adding annotations for the trains
     var annotation: MKAnnotation?
     var borderCrossing = MKPointAnnotation()
-    var cumberland = MKPointAnnotation()
+    var oxxo = MKPointAnnotation()
     var harlem = MKPointAnnotation()
     var jeffP = MKPointAnnotation()
     
@@ -143,9 +143,9 @@ class borderViewController: UIViewController, CLLocationManagerDelegate {
         borderCrossing.coordinate = CLLocationCoordinate2D(latitude: 32.664685, longitude: -115.499830)
         let placeR = Place(borderCrossing.coordinate, "Mexico Border")
         
-        cumberland.title = "Cumberland Blue Line Train"
-        cumberland.coordinate = CLLocationCoordinate2D(latitude: Double(CumberlandTrain.0) ?? 47.1, longitude: Double(CumberlandTrain.1) ?? 87.1)
-        let placeC = Place(cumberland.coordinate, "Cumberland Train")
+        oxxo.title = "Oxxo Market"
+        oxxo.coordinate = CLLocationCoordinate2D(latitude: 32.663696, longitude: -115.496192)
+        let placeC = Place(oxxo.coordinate, "Oxxo")
         
         harlem.title = "Harlem Blue Line Train"
         harlem.coordinate = CLLocationCoordinate2D(latitude: Double(HarlemTrain.0) ?? 47.1, longitude: Double(HarlemTrain.1) ?? 87.1)
@@ -183,13 +183,16 @@ class borderViewController: UIViewController, CLLocationManagerDelegate {
             infoP.image = UIImage(named:"declare")
         }
         
-        else if region.identifier == "Cumberland Blue Line Station"
+        else if region.identifier == "Oxxo Market"
         {
-            var cumberlandS = MKPointAnnotation()
+            var oxxo = MKPointAnnotation()
             
-            cumberlandS.coordinate = CLLocationCoordinate2D(latitude: 41.984383, longitude: -87.837722)
-            let placeCS = Place(cumberlandS.coordinate, "Cumberland Station")
+            oxxo.coordinate = CLLocationCoordinate2D(latitude: 32.663696, longitude: -115.496192)
+            let placeCS = Place(oxxo.coordinate, "Oxxo")
             mapView.addAnnotation(placeCS)
+            showAlert(withTitle:"Oxxo Market", message: "We recommend stopping here for water, snacks, or if you need to use the restroom.")
+            infoT.text = "Oxxo is a Mexican chain of convenience stores, with over 18,000 stores across Latin America. It is the largest chain of convenience stores in Latin America. Its headquarters are in Monterrey, Nuevo León."
+            infoP.image = UIImage(named:"oxxo")
         }
         
         else if region.identifier == "Harlem Blue Line Station"
