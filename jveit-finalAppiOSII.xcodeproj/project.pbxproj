@@ -15,6 +15,15 @@
 		8E8AA3882655CD510065AACC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E8AA3862655CD510065AACC /* LaunchScreen.storyboard */; };
 		8E8AA391265612E60065AACC /* currencyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8AA390265612E60065AACC /* currencyViewController.swift */; };
 		8E8AA398265613F40065AACC /* borderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8AA397265613F40065AACC /* borderViewController.swift */; };
+		8E8AA39E265C26A40065AACC /* tacos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8AA39D265C26A40065AACC /* tacos.swift */; };
+		8E8AA3A1265C272E0065AACC /* foodTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8AA3A0265C272E0065AACC /* foodTableViewController.swift */; };
+		8E8AA3A4265C27C10065AACC /* detailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8AA3A3265C27C10065AACC /* detailViewController.swift */; };
+		8E8AA3A7265C5EBA0065AACC /* shopping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8AA3A6265C5EBA0065AACC /* shopping.swift */; };
+		8E8AA3AA265C62840065AACC /* shopTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8AA3A9265C62840065AACC /* shopTableViewController.swift */; };
+		8E8AA3AD265C63E80065AACC /* shopdetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8AA3AC265C63E80065AACC /* shopdetailViewController.swift */; };
+		8E8AA3B0265C6C620065AACC /* cultural.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8AA3AF265C6C620065AACC /* cultural.swift */; };
+		8E8AA3B3265C6F920065AACC /* culturaldetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8AA3B2265C6F920065AACC /* culturaldetailViewController.swift */; };
+		8E8AA3B6265C6FA40065AACC /* culturalTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8AA3B5265C6FA40065AACC /* culturalTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +38,15 @@
 		8E8AA390265612E60065AACC /* currencyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = currencyViewController.swift; sourceTree = "<group>"; };
 		8E8AA397265613F40065AACC /* borderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = borderViewController.swift; sourceTree = "<group>"; };
 		8E8AA39A265A07210065AACC /* drive.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = drive.gpx; sourceTree = "<group>"; };
+		8E8AA39D265C26A40065AACC /* tacos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tacos.swift; sourceTree = "<group>"; };
+		8E8AA3A0265C272E0065AACC /* foodTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = foodTableViewController.swift; sourceTree = "<group>"; };
+		8E8AA3A3265C27C10065AACC /* detailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = detailViewController.swift; sourceTree = "<group>"; };
+		8E8AA3A6265C5EBA0065AACC /* shopping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = shopping.swift; sourceTree = "<group>"; };
+		8E8AA3A9265C62840065AACC /* shopTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = shopTableViewController.swift; sourceTree = "<group>"; };
+		8E8AA3AC265C63E80065AACC /* shopdetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = shopdetailViewController.swift; sourceTree = "<group>"; };
+		8E8AA3AF265C6C620065AACC /* cultural.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cultural.swift; sourceTree = "<group>"; };
+		8E8AA3B2265C6F920065AACC /* culturaldetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = culturaldetailViewController.swift; sourceTree = "<group>"; };
+		8E8AA3B5265C6FA40065AACC /* culturalTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = culturalTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,7 +83,16 @@
 				8E8AA37D2655CD4A0065AACC /* SceneDelegate.swift */,
 				8E8AA37F2655CD4A0065AACC /* ViewController.swift */,
 				8E8AA3812655CD4A0065AACC /* Main.storyboard */,
+				8E8AA3B2265C6F920065AACC /* culturaldetailViewController.swift */,
+				8E8AA3B5265C6FA40065AACC /* culturalTableViewController.swift */,
+				8E8AA3AC265C63E80065AACC /* shopdetailViewController.swift */,
+				8E8AA3A9265C62840065AACC /* shopTableViewController.swift */,
+				8E8AA3A0265C272E0065AACC /* foodTableViewController.swift */,
+				8E8AA3A3265C27C10065AACC /* detailViewController.swift */,
 				8E8AA397265613F40065AACC /* borderViewController.swift */,
+				8E8AA39D265C26A40065AACC /* tacos.swift */,
+				8E8AA3A6265C5EBA0065AACC /* shopping.swift */,
+				8E8AA3AF265C6C620065AACC /* cultural.swift */,
 				8E8AA39A265A07210065AACC /* drive.gpx */,
 				8E8AA390265612E60065AACC /* currencyViewController.swift */,
 				8E8AA3842655CD510065AACC /* Assets.xcassets */,
@@ -145,11 +172,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E8AA3AD265C63E80065AACC /* shopdetailViewController.swift in Sources */,
+				8E8AA3B0265C6C620065AACC /* cultural.swift in Sources */,
+				8E8AA3B3265C6F920065AACC /* culturaldetailViewController.swift in Sources */,
+				8E8AA3A7265C5EBA0065AACC /* shopping.swift in Sources */,
 				8E8AA3802655CD4A0065AACC /* ViewController.swift in Sources */,
 				8E8AA398265613F40065AACC /* borderViewController.swift in Sources */,
+				8E8AA39E265C26A40065AACC /* tacos.swift in Sources */,
 				8E8AA391265612E60065AACC /* currencyViewController.swift in Sources */,
+				8E8AA3A1265C272E0065AACC /* foodTableViewController.swift in Sources */,
 				8E8AA37C2655CD4A0065AACC /* AppDelegate.swift in Sources */,
 				8E8AA37E2655CD4A0065AACC /* SceneDelegate.swift in Sources */,
+				8E8AA3A4265C27C10065AACC /* detailViewController.swift in Sources */,
+				8E8AA3AA265C62840065AACC /* shopTableViewController.swift in Sources */,
+				8E8AA3B6265C6FA40065AACC /* culturalTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

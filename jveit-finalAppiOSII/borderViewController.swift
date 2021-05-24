@@ -192,7 +192,7 @@ class borderViewController: UIViewController, CLLocationManagerDelegate {
             mapView.addAnnotation(placeCS)
             showAlert(withTitle:"Oxxo Market", message: "We recommend stopping here for water, snacks, or if you need to use the restroom.")
             infoT.text = "Oxxo is a Mexican chain of convenience stores, with over 18,000 stores across Latin America. It is the largest chain of convenience stores in Latin America. Its headquarters are in Monterrey, Nuevo León."
-            infoP.image = UIImage(named:"oxxo")
+            infoP.image = UIImage(named:"Oxxo")
         }
         
         else if region.identifier == "Harlem Blue Line Station"
