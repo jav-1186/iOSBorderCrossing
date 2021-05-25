@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8E705547265D44C800A9D52B /* fourthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E705546265D44C800A9D52B /* fourthViewController.swift */; };
 		8E8AA37C2655CD4A0065AACC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8AA37B2655CD4A0065AACC /* AppDelegate.swift */; };
 		8E8AA37E2655CD4A0065AACC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8AA37D2655CD4A0065AACC /* SceneDelegate.swift */; };
 		8E8AA3802655CD4A0065AACC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8AA37F2655CD4A0065AACC /* ViewController.swift */; };
@@ -27,6 +28,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8E705546265D44C800A9D52B /* fourthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fourthViewController.swift; sourceTree = "<group>"; };
 		8E8AA3782655CD4A0065AACC /* jveit-finalAppiOSII.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "jveit-finalAppiOSII.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E8AA37B2655CD4A0065AACC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8E8AA37D2655CD4A0065AACC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 				8E8AA37D2655CD4A0065AACC /* SceneDelegate.swift */,
 				8E8AA37F2655CD4A0065AACC /* ViewController.swift */,
 				8E8AA3812655CD4A0065AACC /* Main.storyboard */,
+				8E705546265D44C800A9D52B /* fourthViewController.swift */,
 				8E8AA3B2265C6F920065AACC /* culturaldetailViewController.swift */,
 				8E8AA3B5265C6FA40065AACC /* culturalTableViewController.swift */,
 				8E8AA3AC265C63E80065AACC /* shopdetailViewController.swift */,
@@ -177,6 +180,7 @@
 				8E8AA3B3265C6F920065AACC /* culturaldetailViewController.swift in Sources */,
 				8E8AA3A7265C5EBA0065AACC /* shopping.swift in Sources */,
 				8E8AA3802655CD4A0065AACC /* ViewController.swift in Sources */,
+				8E705547265D44C800A9D52B /* fourthViewController.swift in Sources */,
 				8E8AA398265613F40065AACC /* borderViewController.swift in Sources */,
 				8E8AA39E265C26A40065AACC /* tacos.swift in Sources */,
 				8E8AA391265612E60065AACC /* currencyViewController.swift in Sources */,

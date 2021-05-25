@@ -719,6 +719,89 @@
             </objects>
             <point key="canvasLocation" x="4624.6376811594209" y="442.63392857142856"/>
         </scene>
+        <!--Voice Search-->
+        <scene sceneID="WoR-6M-mEX">
+            <objects>
+                <viewController id="duH-KE-C88" customClass="fourthViewController" customModule="jveit_finalAppiOSII" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dA3-Ba-b11">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="02q-7A-tou">
+                                <rect key="frame" x="48" y="20" width="318" height="23.5"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Voice Command Search">
+                                        <attributes>
+                                            <font key="NSFont" size="19" name="AmericanTypewriter-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Try searching by the following criteria: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SDk-by-QSL">
+                                <rect key="frame" x="20" y="71" width="289" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="- Food, Crossing, Documents" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q35-2x-3XC">
+                                <rect key="frame" x="20" y="100" width="289" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Dj-ls-NFo">
+                                <rect key="frame" x="120" y="140" width="175" height="33"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Voice Search">
+                                    <color key="titleColor" systemColor="systemBackgroundColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="recordButtonTapped:" destination="duH-KE-C88" eventType="touchUpInside" id="AIe-gz-KH6"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recorded Text:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XqW-hi-cwC">
+                                <rect key="frame" x="20" y="203" width="374" height="20.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="374" id="M8Y-Ma-heL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="To2-pi-9GB"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="XqW-hi-cwC" firstAttribute="leading" secondItem="To2-pi-9GB" secondAttribute="leading" constant="20" id="2uY-gH-ymI"/>
+                            <constraint firstItem="02q-7A-tou" firstAttribute="top" secondItem="To2-pi-9GB" secondAttribute="top" constant="20" id="AEy-zO-lcZ"/>
+                            <constraint firstItem="To2-pi-9GB" firstAttribute="trailing" secondItem="SDk-by-QSL" secondAttribute="trailing" constant="105" id="C6d-bd-Qqo"/>
+                            <constraint firstItem="8Dj-ls-NFo" firstAttribute="top" secondItem="Q35-2x-3XC" secondAttribute="bottom" constant="19" id="Jp2-mO-8Yl"/>
+                            <constraint firstItem="8Dj-ls-NFo" firstAttribute="leading" secondItem="To2-pi-9GB" secondAttribute="leading" constant="120" id="Km5-55-mck"/>
+                            <constraint firstItem="SDk-by-QSL" firstAttribute="top" secondItem="02q-7A-tou" secondAttribute="bottom" constant="27.5" id="bne-7p-EBs"/>
+                            <constraint firstItem="SDk-by-QSL" firstAttribute="leading" secondItem="To2-pi-9GB" secondAttribute="leading" constant="20" id="dkg-vf-Dfo"/>
+                            <constraint firstItem="To2-pi-9GB" firstAttribute="trailing" secondItem="8Dj-ls-NFo" secondAttribute="trailing" constant="119" id="ha6-e6-UHQ"/>
+                            <constraint firstItem="To2-pi-9GB" firstAttribute="trailing" secondItem="02q-7A-tou" secondAttribute="trailing" constant="48" id="hhp-N7-GQu"/>
+                            <constraint firstItem="02q-7A-tou" firstAttribute="leading" secondItem="To2-pi-9GB" secondAttribute="leading" constant="48" id="lVM-lN-eNK"/>
+                            <constraint firstItem="To2-pi-9GB" firstAttribute="trailing" secondItem="XqW-hi-cwC" secondAttribute="trailing" constant="20" id="nhG-QA-uth"/>
+                            <constraint firstItem="To2-pi-9GB" firstAttribute="trailing" secondItem="Q35-2x-3XC" secondAttribute="trailing" constant="105" id="ooo-gB-KHP"/>
+                            <constraint firstItem="XqW-hi-cwC" firstAttribute="top" secondItem="8Dj-ls-NFo" secondAttribute="bottom" constant="30" id="pJy-sq-qw2"/>
+                            <constraint firstItem="Q35-2x-3XC" firstAttribute="top" secondItem="SDk-by-QSL" secondAttribute="bottom" constant="8" symbolic="YES" id="qav-Y1-P2G"/>
+                            <constraint firstItem="Q35-2x-3XC" firstAttribute="leading" secondItem="To2-pi-9GB" secondAttribute="leading" constant="20" id="wwy-jz-Ivh"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Voice Search" image="line.3.crossed.swirl.circle.fill" catalog="system" selectedImage="hifispeaker.fill" id="tzq-rJ-ReO"/>
+                    <connections>
+                        <outlet property="recordButton" destination="8Dj-ls-NFo" id="IKr-au-8DT"/>
+                        <outlet property="textView" destination="XqW-hi-cwC" id="xhc-K7-sCh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iBW-Kp-5mB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1063.768115942029" y="857.8125"/>
+        </scene>
         <!--Cultural Information-->
         <scene sceneID="Fxc-dr-ALi">
             <objects>
@@ -897,6 +980,7 @@
                         <segue destination="Vzk-Lf-rty" kind="relationship" relationship="viewControllers" id="zPX-4c-7l5"/>
                         <segue destination="dJf-Uk-McA" kind="relationship" relationship="viewControllers" id="hH3-Ea-vo6"/>
                         <segue destination="bWa-PF-B70" kind="relationship" relationship="viewControllers" id="UQa-0E-YvQ"/>
+                        <segue destination="duH-KE-C88" kind="relationship" relationship="viewControllers" id="wLa-h3-aZB"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zij-PH-c0O" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -914,6 +998,8 @@
         <image name="Oxxo" width="662" height="308"/>
         <image name="america" width="620" height="344"/>
         <image name="dollarsign.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="hifispeaker.fill" catalog="system" width="111" height="128"/>
+        <image name="line.3.crossed.swirl.circle.fill" catalog="system" width="128" height="121"/>
         <image name="location.circle.fill" catalog="system" width="128" height="121"/>
         <image name="person.2.fill" catalog="system" width="128" height="80"/>
         <image name="person.and.person.fill" catalog="system" width="128" height="80"/>
