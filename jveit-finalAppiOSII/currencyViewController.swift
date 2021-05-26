@@ -21,7 +21,7 @@ class currencyViewController: UIViewController
     let appKey = "0f82e3a7c5fe4ce185d85093c7768a39"
     var rateD: Double = 0.0
     
-    // Class to hold JSON data for trains
+    // Class to hold JSON data for the currency
     class currency
     {
         var rate: String = ""
@@ -38,7 +38,7 @@ class currencyViewController: UIViewController
     var records: [currency] = []
     var timer = Timer()
     
-    // Dynamically sets URL from segue and starts timer so data is refreshed in background
+    // Sets URL and loads exchange rate when page is loaded
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -48,6 +48,7 @@ class currencyViewController: UIViewController
         
     }
     
+    // Simple calculation for taking API information and apply to user entered amounts
     @IBAction func calculateRate(_ sender: UIButton)
     {
         loadData()

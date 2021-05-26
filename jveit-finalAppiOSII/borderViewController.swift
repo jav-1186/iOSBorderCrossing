@@ -22,18 +22,14 @@ class borderViewController: UIViewController, CLLocationManagerDelegate {
     
     let locationManager = CLLocationManager()
     
-    var RosemontTrain = ("","")
-    var CumberlandTrain = ("","")
-    var HarlemTrain = ("","")
-    var JeffersonTrain = ("", "")
-    
     // Points of interest
     let points =
     [
         (lat: 32.666735, lon: -115.499422, name: "Close Proximity to Mexican Border"),
         (lat: 32.664685, lon: -115.499830, name: "Mexico Border"),
         (lat: 32.663696, lon: -115.496192, name: "Oxxo Market"),
-        (lat: 41.971639, lon: -87.763435, name: "Jefferson Park Blue Line Station")
+        (lat: 32.664640, lon: -115.487578, name: "Ropa de Mexicali"),
+        (lat: 32.660910, lon: -115.479960, name: "Plaza Cachanilla"),
     ]
     
     var regions = [CLCircularRegion]()
@@ -108,12 +104,12 @@ class borderViewController: UIViewController, CLLocationManagerDelegate {
         }
     }
     
-    // Adding annotations for the trains
+    // Adding annotations for the points of interest
     var annotation: MKAnnotation?
     var borderCrossing = MKPointAnnotation()
     var oxxo = MKPointAnnotation()
-    var harlem = MKPointAnnotation()
-    var jeffP = MKPointAnnotation()
+    var ropa = MKPointAnnotation()
+    var plaza = MKPointAnnotation()
     
     
     func locationManager(_ manager: CLLocationManager,
@@ -138,7 +134,7 @@ class borderViewController: UIViewController, CLLocationManagerDelegate {
             mapView.removeAnnotation(annotation!)
         }
         
-        // Adding all of the trains with live data from CTA API
+        // Adding all of the points of interest to the map
         borderCrossing.title = "Mexico Border"
         borderCrossing.coordinate = CLLocationCoordinate2D(latitude: 32.664685, longitude: -115.499830)
         let placeR = Place(borderCrossing.coordinate, "Mexico Border")
@@ -147,13 +143,13 @@ class borderViewController: UIViewController, CLLocationManagerDelegate {
         oxxo.coordinate = CLLocationCoordinate2D(latitude: 32.663696, longitude: -115.496192)
         let placeC = Place(oxxo.coordinate, "Oxxo")
         
-        harlem.title = "Harlem Blue Line Train"
-        harlem.coordinate = CLLocationCoordinate2D(latitude: Double(HarlemTrain.0) ?? 47.1, longitude: Double(HarlemTrain.1) ?? 87.1)
-        let placeH = Place(harlem.coordinate, "Harlem Train")
+        ropa.title = "Ropa de Mexicali"
+        ropa.coordinate = CLLocationCoordinate2D(latitude: 32.664640, longitude: -115.487578)
+        let placeH = Place(ropa.coordinate, "Ropa de Mexicali")
         
-        jeffP.title = "Jefferson Park Blue Line Train"
-        jeffP.coordinate = CLLocationCoordinate2D(latitude: Double(JeffersonTrain.0) ?? 47.1, longitude: Double(JeffersonTrain.1) ?? 87.1)
-        let placeJ = Place(jeffP.coordinate, "Jefferson Park Train")
+        plaza.title = "Plaza Cachanilla"
+        plaza.coordinate = CLLocationCoordinate2D(latitude: 32.660910, longitude: -115.479960)
+        let placeJ = Place(plaza.coordinate, "Plaza Cachanilla")
         
         let place = Place(location.coordinate, "Me")
         mapView.addAnnotation(place)
@@ -177,7 +173,7 @@ class borderViewController: UIViewController, CLLocationManagerDelegate {
             border.title = "Mexico Border"
             border.coordinate = CLLocationCoordinate2D(latitude: 32.664685, longitude: -115.499830)
             let placeR = Place(borderCrossing.coordinate, "Mexico Border")
-            showAlert(withTitle:"You are about to Cross the Mexican Border", message: "Please ensure you have the proper identification (Passport, insurance, drivers license)")
+            showAlert(withTitle:"You are about to Cross the Mexican Border", message: "Please ensure you have the proper identification (*Passport, *Insurance, *Drivers License)")
             flagP.image = UIImage(named:"mexico")
             infoT.text = "When you cross the Mexico border your car will go through customs. If your light is green, you will continue to pass. If you hit a red signal, your luggage and vehicle will be searched."
             infoP.image = UIImage(named:"declare")
@@ -195,33 +191,39 @@ class borderViewController: UIViewController, CLLocationManagerDelegate {
             infoP.image = UIImage(named:"Oxxo")
         }
         
-        else if region.identifier == "Harlem Blue Line Station"
+        else if region.identifier == "Ropa de Mexicali"
         {
-            var harlemS = MKPointAnnotation()
-           
+            var ropa = MKPointAnnotation()
             
-            harlemS.coordinate = CLLocationCoordinate2D(latitude: 41.982322, longitude: -87.807626)
-            let placeHS = Place(harlemS.coordinate, "Harlem Station")
-            mapView.addAnnotation(placeHS)
+            ropa.coordinate = CLLocationCoordinate2D(latitude: 32.664640, longitude: -115.487578)
+            let placeCS = Place(ropa.coordinate, "Ropa de Mexicali")
+            mapView.addAnnotation(placeCS)
+            showAlert(withTitle:"Ropa de Mexicali", message: "Stop here to purchase clothing native to Northern Mexico!.")
+            infoT.text = "Contains typical clothing worn in Northern Mexico. You can find shirts, shoes, pants and even Cowboy hats!"
+            infoP.image = UIImage(named:"Ropa de Mexicali")
         }
         
-        else if region.identifier == "Jefferson Park Blue Line Station"
+        else if region.identifier == "Plaza Cachanilla"
         {
-            var jpS = MKPointAnnotation()
+            var plaza = MKPointAnnotation()
             
-            
-            jpS.coordinate = CLLocationCoordinate2D(latitude: 41.971639, longitude: -87.763435)
-            let placeJPS = Place(jpS.coordinate, "Jefferson Park Station")
-            mapView.addAnnotation(placeJPS)
+            plaza.coordinate = CLLocationCoordinate2D(latitude: 32.660910, longitude: -115.479960)
+            let placeCS = Place(plaza.coordinate, "Plaza Cachanilla")
+            mapView.addAnnotation(placeCS)
+            showAlert(withTitle:"Plaza Cachanilla", message: "Great place to cool off and great an ice cream cone.")
+            infoT.text = "Plaza Cachanilla contains a many variety of stores such as La Ley, Walmart. and boasts a food court with options such as tacos, coffee, or chinese food."
+            infoP.image = UIImage(named:"Plaza Cachanilla")
         }
     }
     
+    // Notify user when leaving POI area
     func locationManager(_ manager: CLLocationManager, didExitRegion region: CLRegion)
     {
         NSLog("Exit region \(region)")
         enterR.text = "Exit \(region.identifier)"
     }
     
+    // Error logging
     func locationManager(_ manager: CLLocationManager, monitoringDidFailFor region: CLRegion?, withError error: Error)
     {
         NSLog("Error \(error)")
@@ -233,6 +235,7 @@ class borderViewController: UIViewController, CLLocationManagerDelegate {
         // Dispose of any resources that can be recreated.
     }
     
+    // Helper function to display alerts
     func showAlert(withTitle title: String?, message: String?)
     {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
