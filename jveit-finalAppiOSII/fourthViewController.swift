@@ -23,6 +23,8 @@ class fourthViewController: UIViewController, SFSpeechRecognizerDelegate
     @IBOutlet weak var textView: UILabel!
     
     @IBOutlet weak var recordButton: UIButton!
+    @IBOutlet weak var resultsT: UILabel!
+    @IBOutlet weak var img: UIImageView!
     
     
     // MARK: View Controller Lifecycle
@@ -99,6 +101,7 @@ class fourthViewController: UIViewController, SFSpeechRecognizerDelegate
             if let result = result {
                 // Update the text view with the results.
                 self.textView.text = result.bestTranscription.formattedString
+                self.searchResults(result.bestTranscription.formattedString)
                 isFinal = result.isFinal
                 print("Text \(result.bestTranscription.formattedString)")
             }
@@ -158,6 +161,32 @@ class fourthViewController: UIViewController, SFSpeechRecognizerDelegate
             } catch {
                 recordButton.setTitle("Recording Not Available", for: [])
             }
+        }
+    }
+    
+    func searchResults(_ input: String)
+    {
+        if input.contains("Tacos")
+        {
+            resultsT.text = "We recommend trying Asadero de Acatlan in Mexicali. They have the best Carne Asada within 100 km. Tell them we sent you and get 5% off your meal"
+            img.image = UIImage(named: "asadero")
+        }
+        
+        else if input.contains("Documents")
+        {
+            resultsT.text = "When crossing the border, make sure you have your documents readily available for border agents. This includes passport, passport card, or Sentri pass if you have it. Please follow the signs and move to the appropriate lane when crossing."
+            img.image = UIImage(named: "sentri")
+        }
+        
+        else if input.contains("Shopping")
+        {
+            resultsT.text = "We highly recommend shopping at Plaza Cacahnilla. It contains a wide variety of local shops such as La Ley, a food court, and in the winter Santa Claus!"
+            img.image = UIImage(named: "Plaza Cachanilla")
+        }
+        
+        else
+        {
+            resultsT.text = "I'm sorry, we couldn't understand. Please try searching by using the terms (Tacos, Documents, Shopping)."
         }
     }
     
